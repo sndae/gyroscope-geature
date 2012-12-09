@@ -1,0 +1,21 @@
+<package>
+  <description brief="gyro_data">
+
+     gyro_data
+
+  </description>
+  <author>madhukar</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/gyro_data</url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+  <depend package="std_msgs"/>
+  <export>
+	<cpp cflags="-I${prefix}/msg/cpp"/>
+  </export>
+
+
+</package>
+
+
