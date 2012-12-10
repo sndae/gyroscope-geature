@@ -1,18 +1,18 @@
 <package>
-  <description brief="serialgyro">
+  <description brief="serialboost">
 
-     serialgyro
+     serialboost
 
   </description>
   <author>madhukar</author>
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
-  <url>http://ros.org/wiki/serialgyro</url>
+  <url>http://ros.org/wiki/serialboost</url>
   <depend package="roscpp"/>
   <depend package="rospy"/>
-  <rosdep name="boost"/>
+  <rosdep name = "boost"/>
   <export>
-	 <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lserialgyro"/>
+	 <cpp cflags="-I${prefix}/include" lflags="-L${prefix}/lib -lserialboost"/>
   </export>
 
 </package>
