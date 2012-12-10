@@ -5,8 +5,8 @@
 int main(int argv, char ** argc)
 {
     ros::init(argv,argc,"serialtest");
-    std::string portname = "/dev/ttyACM0";
-    SerialPort serial((char *)portname.c_str(),9600);
+    char portname[] = "/dev/ttyACM0";
+    SerialPort serial(portname,9600);
     if(!serial.openPort())
     {
         std::cout<<"Serial port is not opened properly"<<std::endl;

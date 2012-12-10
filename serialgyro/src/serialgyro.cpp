@@ -8,7 +8,7 @@
 #include <unistd.h>
 #include <cstdlib>
 #include <iostream>
-
+#include <malloc.h>
 
 SerialPort::SerialPort()
 {
@@ -19,7 +19,8 @@ SerialPort::SerialPort()
 
 SerialPort::SerialPort(char *port, int baudRate)
 {
-        portName = port; portIsOpen = false;
+        portName =(char *)malloc(strlen(port)*sizeof(char));
+        memcpy(portName,port,strlen(port)*sizeof(char));
         portIsOpen = false;
         setRate(baudRate);
 }
@@ -36,6 +37,7 @@ bool SerialPort::openPort()
                fileDescriptor = open(portName, O_RDWR | O_NOCTTY | O_NDELAY);
         }
         std::cout<<"inside open port\n"<<std::endl;
+        std::cout<<fileDescriptor;
         if(fileDescriptor == -1)
         {
                perror("openPort(): Unable to open serial port");

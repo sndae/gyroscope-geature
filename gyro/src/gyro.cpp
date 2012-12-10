@@ -1,6 +1,6 @@
 #include <ros/ros.h>
 #include <gyro_data/gyro_data.h>
-#include <Serialgyro/serialgyro.h>
+#include <serialgyro/serialgyro.h>
 
 int main (int argv,char ** argc)
 {
