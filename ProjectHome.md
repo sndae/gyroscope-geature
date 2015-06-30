@@ -1,0 +1,1 @@
+Using gyroscope for determining the hand movement
